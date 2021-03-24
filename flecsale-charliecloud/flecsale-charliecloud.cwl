@@ -16,8 +16,8 @@ baseCommand:
 $namespaces:
   cwltool: "http://commonwl.org/cwltool#"
 requirements:
+  # See mpi.yml for options
   cwltool:MPIRequirement:
-    # runner: "/home/jaket/bee/openmpi-2.1.1/bin/mpirun"
     processes: $(inputs.nproc)
 inputs:
   nproc:
@@ -37,7 +37,4 @@ inputs:
     inputBinding:
       position: 3
       prefix: -m
-    #default:
-    #  class: Directory
-    #  path: "laristra.flecsale.ubuntu_mpi_master"
 outputs: []
